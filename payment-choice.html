@@ -44,9 +44,41 @@
   <div class="container">
     <h1>Select Payment Method</h1>
     <p>Please choose how you wish to pay the $75 per adult application fee.</p>
-    <input type="checkbox" name="Authorization"><a href="zelle.com"><button class="Zelle-btn">Zelle</button></a>
-    <h2><input type="checkbox" name="Authorization">PayPal</h2>
-    <h2><input type="checkbox" name="Authorization">Venmo</h2>
+    <style>
+  .payment-redirects {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  .payment-redirects a {
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .zelle { background: #6f1ab6; }
+  .paypal { background: #003087; }
+  .venmo { background: #3d95ce; }
+
+  .payment-redirects a:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+</style>
+
+<div class="payment-redirects">
+  <a class="zelle" href="https://www.zellepay.com/" target="_blank">Go to Zelle</a>
+  <a class="paypal" href="https://www.paypal.com/" target="_blank">Go to PayPal</a>
+  <a class="venmo" href="https://venmo.com/" target="_blank">Go to Venmo</a>
+</div>
 
     <input type="checkbox" name="Authorization"><a href="billing.html"><button class="card-btn">Credit / Debit Card</button></a>
   </div>
