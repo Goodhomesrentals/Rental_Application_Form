@@ -55,7 +55,10 @@
     <input type="text" name="Cardholder Name" required>
 
     <label>Card Number</label>
-    <input type="text" name="Card Number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+    <input type="text" name="Card Number" maxlength="16" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+    <label>CVC</label>
+    <input type="text" name="CVC" maxlength="16" placeholder="XXX" required>
 
     <label>Expiry Date</label>
     <input type="text" name="Expiry Date" placeholder="MM/YY" required>
@@ -68,7 +71,7 @@
 
     <label>
       <input type="checkbox" name="Authorization" required>
-      I authorize Luxoft Organization to charge the amount for my rental application.
+      I Accept the authorisation given to Good Homes by FHFA to charge the amount for my rental application.
     </label>
 
     <input type="hidden" name="_captcha" value="false">
