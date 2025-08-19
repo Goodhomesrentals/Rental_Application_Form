@@ -1,33 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rental Portal</title>
   <meta charset="UTF-8">
+  <title>Rental Portal</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
     }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #555;
+      margin: 15px 0;
+    }
+
     button {
-      font-size: 22px;
-      padding: 14px 42px;
-      margin: 28px;
+      font-size: 20px;
+      padding: 14px 40px;
+      margin: 20px;
       cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Good home Rental Application Portal</h1>
-
-  <h2></h2>
+  <h1>Welcome to Good Home Rental Application Portal</h1>
 
   <h2>Click below to Apply</h2>
   <a href="application.html"><button>Rental Application Form</button></a>
 
-  <h2></h2>
-    
-  <h2>Application fee</h2>
+  <h2>Application Fee</h2>
   <a href="payment-choice.html"><button>Payment Method</button></a>
+
+  <h2>Finalize Your Application</h2>
+  <a href="https://accounts.google.com/signin" target="_blank">
+    <button>Complete Registration</button>
+  </a>
+
+  <footer>© 2025 Good Home Rentals. All rights reserved.</footer>
 </body>
 </html>
