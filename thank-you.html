@@ -52,7 +52,7 @@
     }
 
     .hero {
-      text-align: center業員
+      text-align: center;
       padding: 40px 20px;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 15px;
@@ -152,6 +152,11 @@
       }
     }
   </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 5000);
+  </script>
 </head>
 <body>
   <header>
@@ -171,6 +176,7 @@
 
   <div class="section">
     <p>Your application and payment information have been received. We'll be in touch shortly.</p>
+    <p>Redirecting to home in 5 seconds...</p>
     <a href="index.html"><button><i class="fas fa-home"></i> Return to Home</button></a>
   </div>
 
