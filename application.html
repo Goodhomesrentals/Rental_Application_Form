@@ -190,15 +190,12 @@
   </div>
 
   <div class="form-container">
-    <h2>Applicant’s Information</h2>
-    <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_next" value="index.html">
-      <input type="hidden" name="_subject" value="New Rental Application Submission">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_attachment" value="true">
-      
-      <label for="date">Today’s Date</label>
-      <input type="date" id="date" name="date" required>
+   <h1>Rental Application Form</h1>
+
+   <form action="https://formsubmit.co/luxoftorganization@gmail.com" method="POST" enctype="multipart/form-data">
+    
+      <label>TODAY’S DATE</label>
+      <input type="date" name="Today's Date" required>
 
       <label for="address">Address Applied For</label>
       <input type="text" id="address" name="address" required>
@@ -298,6 +295,11 @@
 
       <label for="date-signed">Date Signed</label>
       <input type="date" id="date-signed" name="date-signed" required>
+
+      <!-- Required by Formsubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://goodhomesrentals.github.io/rentalapplication/index.html">
 
       <button type="submit"><i class="fas fa-paper-plane"></i> Submit Application</button>
     </form>
