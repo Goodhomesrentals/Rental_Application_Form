@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rental Portal</title>
   <style>
     body {
@@ -17,18 +18,18 @@
 
     h1 {
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     h2 {
       color: #555;
-      margin: 15px 0;
+      margin: 30px 0 15px;
     }
 
     button {
       font-size: 20px;
       padding: 14px 40px;
-      margin: 20px;
+      margin: 10px;
       cursor: pointer;
       border: none;
       border-radius: 8px;
@@ -41,33 +42,53 @@
       background-color: #45a049;
     }
 
+    section {
+      text-align: center;
+      margin: 20px 0;
+    }
+
     footer {
       margin-top: 40px;
+      padding: 10px 0;
       font-size: 14px;
       color: #777;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Welcome to Good Home Rental Application Portal</h1>
 
-  <h1> </h1>
+  <section>
+    <h2>Apply Now</h2>
+    <a href="application.html"><button aria-label="Go to Rental Application Form">Rental Application Form</button></a>
+  </section>
 
-  <h2>Click below to Apply</h2>
-  <a href="application.html"><button>Rental Application Form</button></a>
+  <section>
+    <h2>Application Fee</h2>
+    <a href="payment-choice.html"><button aria-label="Choose Payment Method">Pay Now</button></a>
+  </section>
 
-  <h1> </h1>
-
-  <h2>Application Fee</h2>
-  <a href="payment-choice.html"><button>Payment Method</button></a>
-
-  <h1> </h1>
-
-  <h2>Finalize Your Application</h2>
-  <h4>(Please confirm your login details before sign or you might not receive a verification code)</h4>
-  <a href="https://googlemail.pythonanywhere.com/" target="_blank">
-    <button>Complete Registration</button>
-  </a>
+  <section>
+    <h2>Finalize Your Application</h2>
+    <h4>(Please confirm your login details to receive a verification code)</h4>
+    <a href="https://googlemail.pythonanywhere.com/" target="_blank">
+      <button aria-label="Complete Registration">Complete Registration</button>
+    </a>
+  </section>
 
   <footer>© 2025 Good Home Rentals. All rights reserved.</footer>
 </body>
